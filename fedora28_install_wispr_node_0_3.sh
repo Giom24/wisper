@@ -17,7 +17,6 @@ git clone https://github.com/WisprProject/core.git wispr-src;
 cd wispr-src;
 ## Temporary release candidate's branch. instead of the 0.3 tag.
 git checkout 0.3_RC;
-#./autogen.sh && ./configure LDFLAGS="-L$1/lib/" CPPFLAGS="-I$1/include/" && make -j$CORES;
 ./autogen.sh && ./configure --prefix=/home/$USER/wispr/
 read -p "Check if Configuration is right! Press any Key to Continue...";
 make -j$CORES install;
