@@ -1,4 +1,3 @@
-
 CORES=`grep -c ^processor /proc/cpuinfo`;
 ##Update System
 echo "Update System";
@@ -6,10 +5,11 @@ sudo dnf update -y;
 
 ##Install Dependencies
 echo "Install Dependencies";
-sudo dnf install @development-tools autoconf libtool boost-devel protobuf-devel libdb-cxx-devel qt5-devel zeromq-devel libdb4-cxx-devel-4.8.30 git -y;
+sudo dnf install @development-tools autoconf libtool boost-devel protobuf-devel libdb-cxx-devel qt5-devel zeromq-devel libdb4-cxx-devel-4.8.30-25.fc28.i686 git -y;
 echo "Replace SSL Lib";
 sudo dnf remove openssl-devel -y;
 sudo dnf install compat-openssl10-devel -y;
+
 
 ##Clone Wisper Repository
 echo "Clone Wisper-Source";
