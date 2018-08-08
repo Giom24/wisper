@@ -12,7 +12,7 @@ sudo dnf install compat-openssl10-devel -y;
 
 
 ##Clone Wisper Repository
-echo "Clone Wisper-Source";
+echo "Clone Wispr-Source";
 git clone https://github.com/WisprProject/core.git wispr-src;
 cd wispr-src;
 ## Temporary release candidate's branch. instead of the 0.3 tag.
@@ -29,4 +29,4 @@ echo "rpcusername="$(openssl rand -base64 32) >> wispr.conf;
 echo "rpcpassword="$(openssl rand -base64 32) >> wispr.conf;
 echo '## Fetching and adding additional nodes.';
 wget https://wispr.tech/nodes -O - >> wispr.conf;
-echo "Finished. Look at ~/wispr/";
+echo "Finished. Take a look at ~/wispr/";
