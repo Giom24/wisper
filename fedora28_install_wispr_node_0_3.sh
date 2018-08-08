@@ -6,12 +6,13 @@ sudo dnf update -y;
 ##Install Dependencies
 echo "Install Dependencies";
 sudo dnf install @development-tools autoconf libtool boost-devel protobuf-devel libdb-cxx-devel qt5-devel zeromq-devel libdb4-cxx-devel-4.8.30-25.fc28.i686 git -y;
+##Replace SSL Lib to match version 1.0.2
 echo "Replace SSL Lib";
 sudo dnf remove openssl-devel -y;
 sudo dnf install compat-openssl10-devel -y;
 
 
-##Clone Wisper Repository
+##Clone Wispr Repository
 echo "Clone Wispr-Source";
 git clone https://github.com/WisprProject/core.git wispr-src;
 cd wispr-src;
